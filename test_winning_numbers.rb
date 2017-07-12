@@ -31,8 +31,8 @@ class Winning_numbers_test < Minitest::Test
 	end
 
 	def test_one_number_off_from_winning_number
-		your_ticket = "1235"
+		off_by_one = "1235"
 		winning_numbers = ["1234","3215","7496"]
-		assert_equal([],lottery(your_ticket,winning_numbers))
+		assert_equal([],compare_number_array(your_ticket,winning_numbers))
 	end
 end
