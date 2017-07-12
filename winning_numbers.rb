@@ -1,9 +1,11 @@
 def grandbash(ticket,winning_ticket)
     matches = []  # creates array for matched numbers
-    
+    p "#{matches} matches here"
    winning_ticket.each do |winner|
         if  winner == ticket # if winner # matches ticket #
             matches << ticket # pushes into array
+       p "#{ticket} ticket"
+       p "#{winner} winner"
         end
     end    
 
@@ -16,19 +18,22 @@ end
 
 
 def one_off?(ticket,winner) #funciton for one digit off
-    
+  #  p "#{ticket} this is the ticket"
+  #  p "#{winner} this is the winner"
    one_off_arr = [] # creates array to be filled
+  # p "#{one_off_arr} one off array"
 
    unless ticket.empty? # returns true if array contains no elements
         
        ticket_arr = ticket.chars # splits the ticket numbers and places into an array
-
-           
+     #  p "#{ticket_arr} ticket array"
+     #  p "#{ticket.chars} ticket chars" 
        winner.each do |win| # for each iteration of one off
             one_off_counter = 0 # sets counter
-            
+     #      p "#{win} win from one_off" 
+          # p "#{one_off_counter} one off counter"
            winner_arr = win.chars # splits winning numbers for comparison to ticket numbers and places them into an array
-
+      #     p "#{winner_arr} winning array"
 
                unless winner_arr[0] == ticket_arr[0] # if no matches then increase the counter to the next digit
                     one_off_counter += 1
