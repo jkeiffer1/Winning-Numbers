@@ -1,11 +1,11 @@
 def grandbash(ticket,winning_ticket)
     matches = []  # creates array for matched numbers
-# p "#{matches} matches here"
-   winning_ticket.each do |winner|
+    winning_ticket.each do |winner|
         if  winner == ticket # if winner # matches ticket #
             matches << ticket # pushes into array
 # p "#{ticket} ticket"
 # p "#{winner} winner"
+# p "#{matches} matches here"
         end
     end    
 
@@ -32,31 +32,31 @@ def one_off?(ticket,winner) #funciton for one digit off
             one_off_counter = 0 # sets counter
 # p "#{win} win from one_off" 
 # p "#{one_off_counter} one off counter"
-           winner_arr = win.chars # splits winning numbers for comparison to ticket numbers and places them into an array
+           	winner_arr = win.chars # splits winning numbers for comparison to ticket numbers and places them into an array
 # p "#{winner_arr} winning array"
 
                unless winner_arr[0] == ticket_arr[0] # if no matches then increase the counter to the next digit
                     one_off_counter += 1
                 end
 
-               unless winner_arr[1]  == ticket_arr[1]
+               unless winner_arr[1]  == ticket_arr[1] # same as above but with index 1
                     one_off_counter += 1
                 end
 
-               unless winner_arr[2]  == ticket_arr[2]
+               unless winner_arr[2]  == ticket_arr[2] # with index 2
                     one_off_counter += 1
                 end
 
-               unless winner_arr[3]  == ticket_arr[3]
+               unless winner_arr[3]  == ticket_arr[3] # with index 3
                     one_off_counter += 1
                 end
             
-           if one_off_counter <= 1 # sets counter to decide when a number that is only one off is chosen as a winner
+           if one_off_counter <= 1 # as long as counter is <= one then it is only one digit off
             one_off_arr << win # pushes win into one_off_arr array
             end
         end
     end    
-
+    
 one_off_arr
 end
 
