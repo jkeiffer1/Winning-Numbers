@@ -34,24 +34,31 @@ def one_off?(ticket,winner) #funciton for one digit off
 # p "#{one_off_counter} one off counter"
            	winner_arr = win.chars # splits winning numbers for comparison to ticket numbers and places them into an array
 # p "#{winner_arr} winning array"
+			index_counter = 0
+				winner_arr.each do |num|
+					unless num == ticket_arr[index_counter]
+						one_off_counter += 1
+					end
+					index_counter += 1
+				end
 
-               unless winner_arr[0] == ticket_arr[0] # if no matches then increase the counter to the next digit
-                    one_off_counter += 1
-                end
+               # unless winner_arr[0] == ticket_arr[0] # if no matches then increase the counter to the next digit
+               #      one_off_counter += 1
+               #  end
 
-               unless winner_arr[1]  == ticket_arr[1] # same as above but with index 1
-                    one_off_counter += 1
-                end
+               # unless winner_arr[1]  == ticket_arr[1] # same as above but with index 1
+               #      one_off_counter += 1
+               #  end
 
-               unless winner_arr[2]  == ticket_arr[2] # with index 2
-                    one_off_counter += 1
-                end
+               # unless winner_arr[2]  == ticket_arr[2] # with index 2
+               #      one_off_counter += 1
+               #  end
 
-               unless winner_arr[3]  == ticket_arr[3] # with index 3
-                    one_off_counter += 1
-                end
+               # unless winner_arr[3]  == ticket_arr[3] # with index 3
+               #      one_off_counter += 1
+               #  end
             
-           if one_off_counter <= 1 # as long as counter is <= one then it is only one digit off
+           if one_off_counter == 1 # as long as counter is <= one then it is only one digit off
             one_off_arr << win # pushes win into one_off_arr array
             end
         end
