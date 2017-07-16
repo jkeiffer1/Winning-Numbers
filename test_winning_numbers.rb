@@ -66,4 +66,16 @@ class Winning_numbers_test < Minitest::Test
 		assert_equal(["123456"],grandbash(ticket,winner))
 	end
 
+	def test_grandbash_return_6_digit_match
+		ticket = "888888"
+		winner = ["123456","888888","999999"]
+		assert_equal(["888888"],grandbash(ticket,winner))
+	end
+
+	def test_grandbsh_return_6_digit_one_off
+		ticket = "888889"
+		winner = ["888888","123456","999999"]
+		assert_equal(["888888"],grandbash(ticket,winner))
+	end
+
 end
