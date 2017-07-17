@@ -3,9 +3,7 @@ def grandbash(ticket,winning_ticket)
     winning_ticket.each do |winner|
         if  winner == ticket # if winner # matches ticket #
             matches << ticket # pushes into array
-# p "#{ticket} ticket"
-# p "#{winner} winner"
-# p "#{matches} matches here"
+
         end
     end    
 
@@ -18,22 +16,19 @@ end
 
 
 def one_off?(ticket,winner) #funciton for one digit off
-# p "#{ticket} this is the ticket"
-# p "#{winner} this is the winner"
+
    one_off_arr = [] # creates array to be filled
-# p "#{one_off_arr} one off array"
+
 
    unless ticket.empty? # returns true if array contains no elements
         
        ticket_arr = ticket.chars # splits the ticket numbers and places into an array
-# p "#{ticket_arr} ticket array"
-# p "#{ticket.chars} ticket chars" 
+ 
        winner.each do |win| # for each iteration of one off
             one_off_counter = 0 # sets counter
-# p "#{win} win from one_off" 
-# p "#{one_off_counter} one off counter"
+
            	winner_arr = win.chars # splits winning numbers for comparison to ticket numbers and places them into an array
-# p "#{winner_arr} winning array"
+
 			index_counter = 0
 				winner_arr.each do |num|
 					unless num == ticket_arr[index_counter]
@@ -70,9 +65,37 @@ end
 
 
 
+###################codes with .length#############
+# if counter == my_number.length - 1
+# counter = 0
+#index = 0
 
+#my_number.length.times do
+#   if my_number[index] == bash_number[index]
+    # counter += 1
+#   p "jerry garcia"
+#   
+#   end
+    #index += 1
+#end
 
+# def flexible(mynew_tik,winner_tik)
+  #count = 0
+  #index = 0
 
+  #mynew_tik.length.times do
+  #    if mynew_tik[index] == winner_tik[index]
+  #        count += 1
+  #    end
+  #  index +=1
+#  end
+
+#  count == mynew_tik.length - 1
+ 
+  #
+  #
+
+#end
 
 
 
