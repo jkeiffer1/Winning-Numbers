@@ -35,5 +35,11 @@ class Simple_array_test < Minitest::Test
 		assert_equal(3, simple_array(first,second))
 	end
 
+	def test_more_complex_string_comparison
+		first = "pastrami"
+		second = "nostrodamas"
+		assert_equal(3, simple_array(first,second))
+	end
+
 
 end
