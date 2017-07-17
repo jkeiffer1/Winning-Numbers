@@ -17,6 +17,11 @@ class Simple_array_test < Minitest::Test
 		second = "1235"
 		assert_equal(3,simple_array(first,second))
 	end
+	def test_strings_with_letter
+		first = "pizza"
+		second = "pasta"
+		assert_equal(2,simple_array(first,second))
+	end
 
 
 end
