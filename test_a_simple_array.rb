@@ -23,5 +23,17 @@ class Simple_array_test < Minitest::Test
 		assert_equal(2,simple_array(first,second))
 	end
 
+	def test_longer_string
+		first = "peanut"
+		second = "pencil"
+		assert_equal(2, simple_array(first,second))
+	end
+
+	def test_different_length_strings
+		first = "peanut"
+		second = "peas"
+		assert_equal(3, simple_array(first,second))
+	end
+
 
 end
