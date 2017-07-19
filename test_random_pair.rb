@@ -39,12 +39,17 @@ class Random_pair_test < Minitest::Test
 		names = ["Josh","Mike","Luke","Matt","Patrick","Garret","Joe","Billy","Garfield"]
 		assert_equal(4, random_pair_no_slice(names))
 	end
+
+	def test_names_without_slice_one_name
+		names = ["Josh"]
+		assert_equal("Insufficient Names", random_pair_no_slice(names))
+	end
 end
 
 
 
 # end
 
-	# def test_number_of_pairs
+	# def test_number_of_pair
 	# 	string = ["Josh","Mike","Luke","Matt","Patrick","Garret","Joe","Billy","Garfield","Spot"]
 	# 	assert_equal(5, random_pair(5))
