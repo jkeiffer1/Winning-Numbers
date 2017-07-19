@@ -1,9 +1,23 @@
  def random_pair(names)
  	array = names.shuffle.each_slice(2).to_a
- 	p array.length
+ 	x = array.length - 1
+ 	if names.length % 2 == 0
+ 		array.length
+ 	else
+ 		array[0] << array[x]
+ 		array.pop
+ 		array[0].flatten!
+
+ 	
  #	"#{array}array"
  #	p "#{array}"
+ 	end
+ 	p "#{array}"
+ 	p array.length
+
  end
+
+ 
 
 
 
