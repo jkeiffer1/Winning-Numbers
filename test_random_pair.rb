@@ -21,6 +21,17 @@ class Random_pair_test < Minitest::Test
 		assert_equal(3, random_pair(names))
 	end
 
+	def test_larger_odd_pairs
+		names = ["Josh","Mike","Luke","Matt","Patrick","Garret","Joe","Billy","Garfield","Spot","Gary","Marv","jeremy"]
+		assert_equal(6, random_pair(names))
+	end
+
+	def test_3_names_equals_1_pair
+		names = ["Josh","Matt","Luke"]
+		assert_equal(1,random_pair(names))
+	end
+
+
 
 end
 
